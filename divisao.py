@@ -9,7 +9,7 @@ if not os.path.exists(output_folder):
 
 resolucao_dpi = 300
 
-print (f"Convertendo '{pdf_path}' para imahgens com {resolucao_dpi} DPI...")
+print (f"Convertendo '{pdf_path}' para imagens com {resolucao_dpi} DPI...")
 
 try: 
     images = convert_from_path(
