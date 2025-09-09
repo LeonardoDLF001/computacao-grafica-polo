@@ -24,6 +24,14 @@ esquerda_files.sort(key=extrair_numero)
 imagens_concatenadas = []
 
 for esquerda_file in esquerda_files:
+    numero = extrair_numero(esquerda_file)
+    if numero == -1:
+        continue  # pula arquivos sem número válido
+
+    # Limite para parar na página 27
+    if numero > 27:
+        break
+
     base_name = esquerda_file.replace("_esquerda.png", "")
     direita_file = base_name + "_direita.png"
 
