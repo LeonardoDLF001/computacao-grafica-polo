@@ -1,7 +1,7 @@
 import os
 
 def renomear_questoes_simples():
-    pasta = "questoes-paginas-15"
+    pasta = "questoes-paginas-29-31"
     
     if not os.path.exists(pasta):
         print(f"Pasta {pasta} não encontrada!")
@@ -10,10 +10,10 @@ def renomear_questoes_simples():
     # Mapeamento direto dos nomes antigos para os novos
     mapeamento = {}
         
-    # Questões normais: parte_012 a parte_040 -> questao-6 a questao-34
-    for i in range(1, 3):
+    # Questões normais: parte_002 a parte_032 -> questao-80 a questao-90
+    for i in range(2, 13):
         antigo = f"parte_{i:03d}.png"
-        novo = f"questao-{i-6}.png"
+        novo = f"questao-{i+78}.png"
         mapeamento[antigo] = novo
     
     # Aplicar o renomeamento
